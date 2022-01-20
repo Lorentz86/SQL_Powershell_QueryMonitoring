@@ -15,7 +15,7 @@ Make a batch script thats creates a file in a folder. The Powershell script dete
 If there is a file, the script runs. If not, nothing happens. 
 
 # Example of a batch script
-Open Notepad and save the following as a .bat file. 
+Open Notepad and save the following as a .bat file. Or download trigger.bat and make the changes. Make sure to have the same location in the powershell script. 
 
 @echo off
 whoami >> \\Examplesrv\Exampleloc\Trigger.txt
