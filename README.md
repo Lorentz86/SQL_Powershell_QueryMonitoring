@@ -8,7 +8,7 @@ Database should have WhoisActive installed. See http://whoisactive.com/ or insta
 
 # Trigger explanation
 I don't work continuously with the actual software that uses the SQL server. So to only get logs when users experience 'lag' in the software. There needs to be a user based triger. 
-Because I don't want to give users permission to run this / a script themselves on te SQLserver for multiple reasons.
+I don't want to give users permission to run this / a script themselves on te SQLserver for multiple reasons.
 
 Here is a solution I used:
 Make a batch script thats creates a file in a folder. The Powershell script detects if there is a file inside the folder. 
