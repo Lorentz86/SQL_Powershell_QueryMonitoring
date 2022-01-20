@@ -6,7 +6,7 @@
 #
 
 
-#Triggers
+#Triggers // shoudl be the same as the Trigger.bat. Check the readme
 $locTrigger = "\\Examplesrv\Exampleloc\"
 $Trigger = Get-Childitem -Path $locTrigger | Where-Object {$_.Name -eq "trigger.txt"}
 
