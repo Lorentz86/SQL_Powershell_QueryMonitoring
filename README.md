@@ -6,7 +6,7 @@ This script needs PS module SqlServer
 Database should have WhoisActive installed. See http://whoisactive.com/ or install DBAtools and Install-DbaWhoIsActive -sqlinstance sqlserver -database databasename. See https://dbatools.io/. 
 
 # Permissions
-Make sure the users had permissions to do queries on the database. 
+Make sure the user that the script wil run under has permissions to do queries on the database. 
 
 # Trigger explanation
 I don't work continuously with the actual software that uses the SQL server. So to only get logs when users experience 'lag' in the software. There needs to be a user based triger. 
