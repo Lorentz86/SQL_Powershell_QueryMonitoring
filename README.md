@@ -23,5 +23,6 @@ hostname >> \\Examplesrv\Exampleloc\Trigger.txt
 date /t >> \\Examplesrv\Exampleloc\Trigger.txt
 
 
-# I made a shortcut from the bat file. You can assign an icon to the shortcut so it acually looks like a program and you can always make changes to the actual bat file. 
+# Bat file
+I made a shortcut from the bat file. You can assign an icon to the shortcut so it acually looks like a program and you can always make changes to the actual bat file. 
 Share the shortcut with the some or all of the users. 
