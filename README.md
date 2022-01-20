@@ -18,9 +18,9 @@ If there is a file, the script runs. If not, nothing happens.
 Open Notepad and save the following as a .bat file. Or download trigger.bat and make the changes. Make sure to have the same location in the powershell script. 
 
 @echo off
-whoami >> \\Examplesrv\Exampleloc\Trigger.txt
-hostname >> \\Examplesrv\Exampleloc\Trigger.txt
-date /t >> \\Examplesrv\Exampleloc\Trigger.txt
+whoami >> \\\Examplesrv\Exampleloc\Trigger.txt
+hostname >> \\\Examplesrv\Exampleloc\Trigger.txt
+date /t >> \\\Examplesrv\Exampleloc\Trigger.txt
 
 
 # Bat file
