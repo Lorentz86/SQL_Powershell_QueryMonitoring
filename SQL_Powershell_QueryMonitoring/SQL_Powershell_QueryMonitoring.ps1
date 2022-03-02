@@ -11,7 +11,7 @@ $Module = Get-module -Name sqlserver -ErrorAction Stop
 }
 catch {Write-Warning "Could not find PS module sqlserver "}
 
-<<<<<<< HEAD
+
 if ($Module) {Write-Host "PSmodule is installed"}
 Else {
 	Get-Module -ListAvailable | Out-Null
@@ -20,9 +20,8 @@ Else {
 }
 
 #Triggers // See Read-Me
-=======
-#Triggers // shoudl be the same as the Trigger.bat. Check the readme
->>>>>>> e0a66087112af1b61d74ad46ce643e01db0d4491
+#Triggers // should be the same as the Trigger.bat. Check the readme
+
 $locTrigger = "\\Examplesrv\Exampleloc\"
 $Trigger = Get-Childitem -Path $locTrigger | Where-Object {$_.Name -eq "trigger.txt"}
 
