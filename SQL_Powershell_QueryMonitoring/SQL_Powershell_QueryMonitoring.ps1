@@ -2,11 +2,23 @@
 # This script has been tested on Powershell 5.1
 # This script needs PS module SqlServer
 # Database should have WhoisActive installed. See http://whoisactive.com/ or install DBAtools and Install-DbaWhoIsActive -sqlinstance sqlserver -database databasename. See https://dbatools.io/. 
-#
+# The user you run this script should have permissions to run queries on the database. 
 #
 
+#PSmodule check
+try {Import-module -name sqlserver -ErrorAction Stop | Out-Null 
+$Module = Get-module -Name sqlserver -ErrorAction Stop
+}
+catch {Write-Warning "Could not find PS module sqlserver "}
 
-#Triggers
+if ($Module) {Write-Host "PSmodule is installed"}
+Else {
+	Get-Module -ListAvailable | Out-Null
+	Install-Module -Name 'sqlserver' -ErrorAction Stop | Out-Null
+	Import-Module -Name 'sqlserver' -ErrorAction Stop | Out-Null
+}
+
+#Triggers // See Read-Me
 $locTrigger = "\\Examplesrv\Exampleloc\"
 $Trigger = Get-Childitem -Path $locTrigger | Where-Object {$_.Name -eq "trigger.txt"}
 
