@@ -5,13 +5,11 @@
 # The user you run this script should have permissions to run queries on the database. 
 #
 
-#PSmodule check
+# PSmodule check
 try {Import-module -name sqlserver -ErrorAction Stop | Out-Null 
 $Module = Get-module -Name sqlserver -ErrorAction Stop
 }
 catch {Write-Warning "Could not find PS module sqlserver "}
-
-
 if ($Module) {Write-Host "PSmodule is installed"}
 Else {
 	Get-Module -ListAvailable | Out-Null
@@ -19,18 +17,17 @@ Else {
 	Import-Module -Name 'sqlserver' -ErrorAction Stop | Out-Null
 }
 
-#Triggers // See Read-Me
-#Triggers // should be the same as the Trigger.bat. Check the readme
+# Triggers // should be the same as the Trigger.bat. Check the readme.
 
 $locTrigger = "\\Examplesrv\Exampleloc\"
 $Trigger = Get-Childitem -Path $locTrigger | Where-Object {$_.Name -eq "trigger.txt"}
 
 if($Trigger){
 
-#Filename
+# Filename
 $filename = (Get-Date -Format ddMMyyyy) + 'SQLActive.txt'
 
-#Location where Logfiles can be written to
+# Location where Logfiles can be written to
 $locLog = "\\Examplesrv\Exampleloc\$filename"
 
 # SQL Server settings
@@ -55,12 +52,12 @@ Start-Sleep -Seconds 5
 }
 Write-Host "Timer End"
 
-#Cleaning up files
+# Cleaning up files
 foreach($t in $Trigger){$t.FullName | Remove-Item}
 
 }
 
 Else {Write-Host "No trigger found"}
 
-#End of script
+# End of script
 
